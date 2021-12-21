@@ -1,32 +1,32 @@
 variable "vault_token" {
   type        = string
   description = "Vault token"
-  sensitive = true
-  nullable = false
+  sensitive   = true
+  presence    = required
 }
 
 variable "vault_address" {
   type        = string
   description = "Vault token"
-  nullable = false
+  presence    = required
 }
 
 variable "path" {
   type        = string
   description = "Path for secrets"
-  nullable = false
+  presence    = required
 }
 
 variable "role_name" {
   type        = string
   description = "Name for the role in Vault"
-  nullable = false
+  presence    = required
 }
 
 variable "environment" {
   type        = string
   description = "Environment where the cert is going to be used"
-  nullable = false
+  presence    = required
 }
 
 

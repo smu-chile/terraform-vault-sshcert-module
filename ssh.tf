@@ -1,6 +1,6 @@
 resource "vault_mount" "signer" {
   type = "ssh"
-  path = join("-", [var.path,"${var.environment}"])
+  path = join("-", [var.path, "${var.environment}"])
 }
 
 
@@ -10,7 +10,7 @@ resource "vault_ssh_secret_backend_ca" "basic_engine" {
 }
 
 resource "vault_ssh_secret_backend_role" "role" {
-  name                    = join("-", [var.role_name,"${var.environment}"])   
+  name                    = join("-", [var.role_name, "${var.environment}"])
   backend                 = vault_mount.signer.path
   key_type                = "ca"
   allow_user_certificates = true
