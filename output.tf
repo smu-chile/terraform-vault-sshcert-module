@@ -6,3 +6,7 @@ output "environment" {
 output "public_key_info" {
   value = chomp(vault_ssh_secret_backend_ca.basic_engine.public_key)
 }
+
+output "private_key_info" {
+  value = chomp(vault_ssh_secret_backend_ca.basic_engine.private_key)
+}
