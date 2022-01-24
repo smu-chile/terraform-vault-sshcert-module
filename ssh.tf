@@ -14,7 +14,7 @@ resource "vault_ssh_secret_backend_role" "role" {
   backend                 = vault_mount.signer.path
   key_type                = "ca"
   allow_user_certificates = true
-  default_user            = "join(" - ", [var.root-domain, var.environment])"
+  default_user            = join("-", [var.root-domain, var.environment])
   allowed_users           = "*"
   allowed_extensions      = "permit-pty,permit-port-forwarding"
   ttl                     = 1800
