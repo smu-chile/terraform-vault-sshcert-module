@@ -1,6 +1,6 @@
 resource "vault_mount" "signer" {
   type = "ssh"
-  path = join("-", [var.path, "${var.environment}"])
+  path = join("", [var.path, "${var.environment}"])
 }
 
 
