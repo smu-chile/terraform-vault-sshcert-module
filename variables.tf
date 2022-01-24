@@ -24,4 +24,10 @@ variable "environment" {
   description = "Environment where the cert is going to be used"
 }
 
+variable "root-domain" {
+  type        = string
+  description = "Name for the role in Vault"
+}
+
+
 
